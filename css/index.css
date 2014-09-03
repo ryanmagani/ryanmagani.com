@@ -1,0 +1,64 @@
+body {
+	background-image: url('../img/background.png');
+	margin-top: 1%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+body div {
+	background-color: white;
+	border-radius: 7px;
+	height: 98vh;
+	overflow: hidden;
+}
+
+.fade {
+    opacity: 1;
+    transition: .7s linear;
+}
+
+.fade.ng-hide {
+    opacity: 0;
+    transition: 0s linear;
+}
+
+header {
+	text-align: center;
+}
+
+#info-list {
+	float: right;
+	text-align: right;
+}
+
+nav {
+	margin-top: 1%;
+}
+
+nav ul li {
+	cursor: pointer;
+}
+
+object {
+	display: block;
+	float: right;
+	height: 80vh;
+	margin: 1% 15% 1% auto;
+	width: 70%;
+
+	/* For the error message */
+	text-align: center;
+}
+
+#projects {
+	text-align: center;
+}
+
+section {
+	margin: 1% 1% 1% 1%;
+}
+
+section ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
