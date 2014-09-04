@@ -8,7 +8,7 @@ body {
 body div {
 	background-color: white;
 	border-radius: 7px;
-	height: 98vh;
+	min-height: 90vh;
 	overflow: hidden;
 }
 
@@ -42,7 +42,7 @@ nav ul li {
 object {
 	display: block;
 	float: right;
-	height: 80vh;
+	min-height: 90vh;
 	margin: 1% 15% 1% auto;
 	width: 70%;
 
