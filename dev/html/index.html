@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Ryan Magani</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Software Engineer studying Computer Science and Business Administration at the University of Washington">
+		<meta name="keywords" content="ryan,magani,ryanmagani">
+		<meta name="author" content="Ryan Magani">
+		<link rel="icon" type="image/ico" href="../img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../css/lib/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+	</head>
+
+	<body ng-app="PersonalWebsite" ng-controller="Main">
+
+		<div>
+
+			<header>
+				<h1>Ryan Magani</h1>
+			</header>
+
+			<nav>
+				<ul class="nav nav-tabs">
+					<li ng-class="{active: selected == TabEnum.ABOUT}"><a ng-click="selected = TabEnum.ABOUT">About</a></li>
+					<li ng-class="{active: selected == TabEnum.PROJECTS}"><a ng-click="selected = TabEnum.PROJECTS">Projects</a></li>
+					<li ng-class="{active: selected == TabEnum.RESUME}"><a ng-click="selected = TabEnum.RESUME">Resume</a></li>
+				</ul>
+			</nav>
+
+			<!-- About -->
+			<section ng-show="selected == TabEnum.ABOUT" class="tab-pane fade">
+				<ul id="info-list">
+					<li><a href="mailto:info@ryanmagani.com">info@ryanmagani.com</a></li>
+					<li><a href="https://www.linkedin.com/in/ryanmagani">LinkedIn</a></li>
+					<li><a href="https://github.com/ryanmagani/">GitHub</a><li>
+				</ul>
+				<img src="../img/main.jpg" alt="Ryan Magani" height="200" width="162">
+				<p>My name is Ryan Magani. I am a student pursuing degrees in Computer Science and Business Administration at the University of Washington.</p>
+			</section>
+
+			<!-- Projects -->
+			<section ng-show="selected == TabEnum.PROJECTS" class="tab-pane fade" ng-controller="Projects" id="projects">
+				<ul ng-show="projectList">
+					<li ng-repeat="project in projectList"><a href="{{project.html_url}}">{{project.name}}</a>: {{project.description}}</li>
+				</ul>
+
+				<div ng-show="errorMessage">
+					<p>See my projects on <a href="https://github.com/ryanmagani?tab=repositories">GitHub</a></p>
+				</div>
+			</section>
+
+			<!-- Resume -->
+			<section ng-show="selected == TabEnum.RESUME" class="tab-pane fade">
+				<object data="../docs/Ryan%20Magani%20Resume.pdf" type="application/pdf">
+					<p>It appears you don't have a PDF plugin for your browser, please <a href="../docs/Ryan%20Magani%20Resume.pdf">download</a> the file to view it</p>
+				</object>
+				<div>
+					<a href="../docs/Ryan%20Magani%20Resume.pdf">Download</a>
+				</div>
+
+			</section>
+
+		</div>
+
+		<script src="../js/lib/angular.min.js"></script>
+		<script src="../js/lib/ui-bootstrap-0.11.0.min.js"></script>
+		<script src="../js/lib/angular-animate.min.js"></script>
+		<script src="../js/PersonalWebsiteModule.js"></script>
+		<script src="../js/MainController.js"></script>
+		<script src="../js/ProjectsController.js"></script>
+	</body>
+
+</html>
