@@ -1,9 +1,6 @@
 body {
 	background-image: url('../img/background.png');
-	margin-top: 1%;
-	margin-left: 5%;
-	margin-right: 5%;
-	margin-bottom: 1%;
+	margin: 1% 5% 1% 5%;
 }
 
 body div {
@@ -25,7 +22,7 @@ body div {
     transition: 0s linear;
 }
 
-header {
+header, #projects {
 	text-align: center;
 }
 
@@ -49,10 +46,6 @@ object {
 	margin: 1% 15% 1% auto;
 	width: 70%;
 	/* For the error message */
-	text-align: center;
-}
-
-#projects {
 	text-align: center;
 }
 
