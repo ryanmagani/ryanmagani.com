@@ -22,6 +22,10 @@ body div {
     transition: 0s linear;
 }
 
+h1 {
+	font-weight: bold;
+}
+
 header, #projects {
 	text-align: center;
 }
